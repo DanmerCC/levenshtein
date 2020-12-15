@@ -1,0 +1,27 @@
+{
+    "name": "danmercc/levenshtein",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Danmer Ccoscco",
+            "email": "danmerccoscco@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php" : ">=7.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DanmerCC\\Levenshtein\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DanmerCC\\Levenshtein\\Tests\\": "tests"
+        }
+    }
+}
