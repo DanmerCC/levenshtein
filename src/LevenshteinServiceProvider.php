@@ -13,7 +13,9 @@ class LevenshteinServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->publishes([
+            __DIR__.'/config.php' => config_path('leveinshtein.php'),
+        ]);
     }
 
     /**

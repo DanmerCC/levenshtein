@@ -12,7 +12,7 @@ class CreateFunctionLevenshteinMysql extends Migration
      */
     public function up()
     {
-        DB::connection()->getPdo()->exec("DROP function IF EXISTS levenshtein");
+        DB::connection(config('levenshtein.connection'))->getPdo()->exec("DROP function IF EXISTS levenshtein");
 
         $procedure = '
     CREATE FUNCTION levenshtein( s1 VARCHAR(255), s2 VARCHAR(255) )
