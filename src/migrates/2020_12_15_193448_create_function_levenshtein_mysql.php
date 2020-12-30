@@ -26,6 +26,9 @@ class CreateFunctionLevenshteinMysql extends Migration
 
             SET s1_len = CHAR_LENGTH(s1), s2_len = CHAR_LENGTH(s2), cv1 = 0x00, j = 1, i = 1, c = 0;
 
+            IF s1 IS NULL OR s2 IS NULL THEN
+                RETURN NULL;
+            END IF;
             IF s1 = s2 THEN
                 RETURN 0;
             ELSEIF s1_len = 0 THEN
